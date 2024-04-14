@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSS</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style>
+    input,
+button {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+}
+
+button {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-group {
+  clear: both;
+  margin: 15px 0;
+  position: relative;
+}
+
+.input-group button {
+  background-color: #ababab;
+  width: 44px;
+  border-radius: 10px;
+  height: 44px;
+  transition: all 300ms ease;
+}
+
+.input-group .button-minus,
+.input-group .button-plus {
+  height: 44px;
+  padding: 0;
+  width: 44px;
+  position: relative;
+  font-size: 20px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+}
+
+.button-plus:before {
+  content: '\f067';
+  position: relative;
+  top: 2px;
+}
+
+.button-minus:before {
+  content: '\f068';
+  position: relative;
+  top: 2px;
+}
+
+.input-group .button-minus {
+  line-height: 40px;
+}
+
+.input-group .quantity-field {
+  position: relative;
+  height: 44px;
+  left: -6px;
+  padding: 1px 0 0;
+  text-align: center;
+  width: 44px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 0px 10px 5px;
+  border: 2px solid #fdb913;
+  resize: vertical;
+  background-color: #ababab;
+  box-sizing: border-box;
+}
+
+.button-plus {
+  left: -13px;
+}
+
+button:hover {
+  color: #ffd161;
+  text-shadow: 1px 1px #a79b7d;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="input-group">
+  <div class="Counter">
+    <button class="button-minus" data-action="minus" data-field="quantity"></button>
+    <input type="number" name="quantity" class="value quantity-field">
+    <button class="button-plus" data-action="add" data-field="quantity"></button>
+  </div>
+</div>
+
+<script src="counter.js" type="module"></script>
+<script src="main.js" type="module"></script>
+
+</body>
+</html>
